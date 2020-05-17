@@ -1,0 +1,7 @@
+{
+  "name": "testemunho-telefone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
