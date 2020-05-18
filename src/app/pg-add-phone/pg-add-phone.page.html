@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar mode="ios">
+        <ion-buttons slot="start" (click)="close()">
+            <ion-icon class="icon-header" slot="icon-only" src="assets/close.svg" color="danger"></ion-icon>
+        </ion-buttons>
+        <ion-title>
+            Adicionar Telefone
+        </ion-title>
+        <ion-buttons slot="end" (click)="save()">
+            <ion-icon class="icon-header" slot="icon-only" src="assets/ok.svg" color="success"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+    <div class="home-header">
+        <h1 class="title">Adicionar</h1>
+    </div>
+    <div class="container">
+        <ion-card class="card-history">
+            <ion-card-header>
+                <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="segmentValue">
+                    <ion-segment-button value="single">
+                        <ion-label>Único</ion-label>
+                    </ion-segment-button>
+                    <ion-segment-button value="multiple">
+                        <ion-label>Múltiplo</ion-label>
+                    </ion-segment-button>
+                </ion-segment>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-item>
+                    <ion-label position="stacked">DDD</ion-label>
+                    <ion-input inputmode="tel" [(ngModel)]="ddd" maxlength="2"></ion-input>
+                </ion-item>
+
+                <div *ngIf="segmentValue === 'single'">
+                    <ion-item>
+                        <ion-label position="stacked">Telefone</ion-label>
+                        <ion-input appMyNumberOnly inputmode="tel" maxlength="9" [(ngModel)]="singlePhone"></ion-input>
+                    </ion-item>
+                </div>
+                <div *ngIf="segmentValue !== 'single'">
+                    <ion-item>
+                        <ion-label position="stacked">Início Telefone</ion-label>
+                        <ion-input inputmode="tel" maxlength="5" [(ngModel)]="multiplePhone"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">Últimos dígitos (de)</ion-label>
+                        <ion-input inputmode="tel" maxlength="4" [(ngModel)]="multipleLastStart"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">Últimos dígitos (até)</ion-label>
+                        <ion-input inputmode="tel" maxlength="4" [(ngModel)]="multipleLastEnd"></ion-input>
+                    </ion-item>
+                </div>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>
+  

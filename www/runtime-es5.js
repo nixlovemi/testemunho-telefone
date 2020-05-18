@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"common":"common","home-home-module":"home-home-module","pg-details-pg-details-module":"pg-details-pg-details-module","polyfills-core-js":"polyfills-core-js","polyfills-css-shim":"polyfills-css-shim","polyfills-dom":"polyfills-dom","shadow-css-93af91ae-js":"shadow-css-93af91ae-js","swiper-bundle-f564f87c-js":"swiper-bundle-f564f87c-js","focus-visible-15ada7f7-js":"focus-visible-15ada7f7-js","index-120c8c20-js":"index-120c8c20-js","input-shims-77712174-js":"input-shims-77712174-js","status-tap-6a77b957-js":"status-tap-6a77b957-js","swipe-back-7b4b8b66-js":"swipe-back-7b4b8b66-js","tap-click-252af35a-js":"tap-click-252af35a-js"}[chunkId]||chunkId) +    "-es5.js"
+/******/ 		return __webpack_require__.p + "" + ({"common":"common","home-home-module":"home-home-module","pg-add-phone-pg-add-phone-module":"pg-add-phone-pg-add-phone-module","pg-details-pg-details-module":"pg-details-pg-details-module","polyfills-core-js":"polyfills-core-js","polyfills-css-shim":"polyfills-css-shim","polyfills-dom":"polyfills-dom","shadow-css-93af91ae-js":"shadow-css-93af91ae-js","swiper-bundle-f564f87c-js":"swiper-bundle-f564f87c-js","focus-visible-15ada7f7-js":"focus-visible-15ada7f7-js","index-120c8c20-js":"index-120c8c20-js","input-shims-77712174-js":"input-shims-77712174-js","status-tap-6a77b957-js":"status-tap-6a77b957-js","swipe-back-7b4b8b66-js":"swipe-back-7b4b8b66-js","tap-click-252af35a-js":"tap-click-252af35a-js"}[chunkId]||chunkId) +    "-es5.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

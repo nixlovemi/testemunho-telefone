@@ -354,6 +354,233 @@ const openURL = async (url, ev, direction) => {
 
 
 
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html":
+/*!*******************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar mode=\"ios\">\n        <ion-buttons slot=\"start\" (click)=\"close()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/close.svg\" color=\"danger\"></ion-icon>\n        </ion-buttons>\n        <ion-title>\n            Adicionar Telefone\n        </ion-title>\n        <ion-buttons slot=\"end\" (click)=\"save()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/ok.svg\" color=\"success\"></ion-icon>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n  \n<ion-content>\n    <div class=\"home-header\">\n        <h1 class=\"title\">Adicionar</h1>\n    </div>\n    <div class=\"container\">\n        <ion-card class=\"card-history\">\n            <ion-card-header>\n                <ion-segment (ionChange)=\"segmentChanged($event)\" [(ngModel)]=\"segmentValue\">\n                    <ion-segment-button value=\"single\">\n                        <ion-label>Único</ion-label>\n                    </ion-segment-button>\n                    <ion-segment-button value=\"multiple\">\n                        <ion-label>Múltiplo</ion-label>\n                    </ion-segment-button>\n                </ion-segment>\n            </ion-card-header>\n            <ion-card-content>\n                <ion-item>\n                    <ion-label position=\"stacked\">DDD</ion-label>\n                    <ion-input inputmode=\"tel\" [(ngModel)]=\"ddd\" maxlength=\"2\"></ion-input>\n                </ion-item>\n\n                <div *ngIf=\"segmentValue === 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Telefone</ion-label>\n                        <ion-input appMyNumberOnly inputmode=\"tel\" maxlength=\"9\" [(ngModel)]=\"singlePhone\"></ion-input>\n                    </ion-item>\n                </div>\n                <div *ngIf=\"segmentValue !== 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Início Telefone</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"5\" [(ngModel)]=\"multiplePhone\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (de)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastStart\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (até)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastEnd\"></ion-input>\n                    </ion-item>\n                </div>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n  ");
+
+/***/ }),
+
+/***/ "./src/app/pg-add-phone/pg-add-phone.page.scss":
+/*!*****************************************************!*\
+  !*** ./src/app/pg-add-phone/pg-add-phone.page.scss ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BnLWFkZC1waG9uZS9wZy1hZGQtcGhvbmUucGFnZS5zY3NzIn0= */");
+
+/***/ }),
+
+/***/ "./src/app/pg-add-phone/pg-add-phone.page.ts":
+/*!***************************************************!*\
+  !*** ./src/app/pg-add-phone/pg-add-phone.page.ts ***!
+  \***************************************************/
+/*! exports provided: PgAddPhonePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PgAddPhonePage", function() { return PgAddPhonePage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _utils_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils.service */ "./src/app/utils.service.ts");
+
+
+
+
+let PgAddPhonePage = 
+// tslint:disable-next-line: component-class-suffix
+class PgAddPhonePage {
+    constructor(modalController, utilsSrv) {
+        this.modalController = modalController;
+        this.utilsSrv = utilsSrv;
+        this.segmentValue = 'single';
+    }
+    ngOnInit() {
+    }
+    close() {
+        this.modalController.dismiss({
+            reload: false
+        });
+    }
+    validateData() {
+        const ret = {
+            error: false,
+            msg: ''
+        };
+        const vDDD = (typeof this.ddd === 'undefined') ? 0 : parseInt(this.ddd, 10);
+        const vSinglePhone = (typeof this.singlePhone !== 'undefined') ? this.singlePhone : '';
+        const vMultiplePhone = (typeof this.multiplePhone !== 'undefined') ? this.multiplePhone : '';
+        const vMultipleLastStart = (typeof this.multipleLastStart !== 'undefined') ? this.multipleLastStart : '';
+        const vMultipleLastEnd = (typeof this.multipleLastEnd !== 'undefined') ? this.multipleLastEnd : '';
+        if (vDDD <= 0 || vDDD > 99) {
+            ret.error = true;
+            ret.msg = 'Informe o DDD entre 01 e 99';
+        }
+        else {
+            if (this.segmentValue === 'single') {
+                if (vSinglePhone.length !== 9 && vSinglePhone.length !== 8) {
+                    ret.error = true;
+                    ret.msg = 'Informe o telefone com 8 ou 9 dígitos';
+                }
+            }
+            else {
+                if (vMultiplePhone.length !== 5 && vMultiplePhone.length !== 4) {
+                    ret.error = true;
+                    ret.msg = 'Informe o início do telefone com 4 ou 5 dígitos';
+                }
+                else if (vMultipleLastStart.length !== 4 || vMultipleLastEnd.length !== 4) {
+                    ret.error = true;
+                    ret.msg = 'Informe os últimos dígitos do telefone com 4 dígitos';
+                }
+                else {
+                    const minPhone = parseInt(this.multipleLastStart, 10);
+                    const maxPhone = parseInt(this.multipleLastEnd, 10);
+                    if (minPhone >= maxPhone) {
+                        ret.error = true;
+                        ret.msg = 'Informe o último número (de:) menor que o último número (para:)';
+                    }
+                }
+            }
+        }
+        return ret;
+    }
+    save() {
+        const retValidate = this.validateData();
+        if (retValidate.error) {
+            this.utilsSrv.showAlert('Alerta', '', retValidate.msg, ['OK']);
+        }
+        else {
+            const arrPhones = [];
+            const phoneItem = {
+                ddd: '',
+                phone: ''
+            };
+            phoneItem.ddd = (this.ddd.length === 1) ? '0' + this.ddd : this.ddd;
+            if (this.segmentValue === 'single') {
+                phoneItem.phone = this.singlePhone;
+                arrPhones.push(phoneItem);
+            }
+            else {
+            }
+            console.log(arrPhones);
+            this.modalController.dismiss({
+                reload: true,
+                newId: 0
+            });
+        }
+    }
+    segmentChanged(event) {
+        // console.log(event);
+    }
+};
+PgAddPhonePage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"] },
+    { type: _utils_service__WEBPACK_IMPORTED_MODULE_3__["UtilsService"] }
+];
+PgAddPhonePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-pg-add-phone',
+        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./pg-add-phone.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html")).default,
+        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./pg-add-phone.page.scss */ "./src/app/pg-add-phone/pg-add-phone.page.scss")).default]
+    })
+    // tslint:disable-next-line: component-class-suffix
+], PgAddPhonePage);
+
+
+
+/***/ }),
+
+/***/ "./src/app/utils.service.ts":
+/*!**********************************!*\
+  !*** ./src/app/utils.service.ts ***!
+  \**********************************/
+/*! exports provided: UtilsService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "UtilsService", function() { return UtilsService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+
+
+let UtilsService = class UtilsService {
+    constructor(loadingCtr, alertCtr, platform) {
+        this.loadingCtr = loadingCtr;
+        this.alertCtr = alertCtr;
+        this.platform = platform;
+    }
+    getAppVersion() {
+        return '1.0.0';
+    }
+    getLoader(message, spinner) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            return yield this.loadingCtr.create({
+                message,
+                spinner,
+            }).then((res) => {
+                res.present();
+                const TIME_IN_MS = 5000;
+                const hideFooterTimeout = setTimeout(() => {
+                    this.closeLoader();
+                }, TIME_IN_MS);
+            });
+        });
+    }
+    closeLoader() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            try {
+                return yield this.loadingCtr.dismiss();
+            }
+            catch (err) {
+                return;
+            }
+        });
+    }
+    showAlert(header, subHeader, message, buttons) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const alert = yield this.alertCtr.create({
+                header,
+                subHeader,
+                message,
+                buttons,
+            });
+            return yield alert.present();
+        });
+    }
+    isMobileBrowser() {
+        // is this web-browser on mobile device
+        return this.platform.is('mobileweb');
+    }
+};
+UtilsService.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] }
+];
+UtilsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root'
+    })
+], UtilsService);
+
+
+
 /***/ })
 
 }]);

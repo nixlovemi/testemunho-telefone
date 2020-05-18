@@ -211,9 +211,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var routes = [{
       path: 'home',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | home-home-module */
-        "home-home-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
         /*! ./home/home.module */
         "./src/app/home/home.module.ts")).then(function (m) {
           return m.HomePageModule;
@@ -232,6 +232,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./pg-details/pg-details.module */
         "./src/app/pg-details/pg-details.module.ts")).then(function (m) {
           return m.PgDetailsPageModule;
+        });
+      }
+    }, {
+      path: 'pg-add-phone',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | pg-add-phone-pg-add-phone-module */
+        [__webpack_require__.e("common"), __webpack_require__.e("pg-add-phone-pg-add-phone-module")]).then(__webpack_require__.bind(null,
+        /*! ./pg-add-phone/pg-add-phone.module */
+        "./src/app/pg-add-phone/pg-add-phone.module.ts")).then(function (m) {
+          return m.PgAddPhonePageModule;
         });
       }
     }];
@@ -335,7 +346,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           this.platform.ready().then(function () {
-            _this.statusBar.styleDefault();
+            // this.statusBar.styleDefault();
+            _this.statusBar.overlaysWebView(false);
+
+            _this.statusBar.styleLightContent();
 
             _this.splashScreen.hide();
           });
@@ -449,6 +463,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
       entryComponents: [],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
+      exports: [],
       providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
@@ -555,7 +570,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /Users/work/NetBeansProjects/testemunho-telefone/src/main.ts */
+    /*! /Users/leandro/NetBeansProjects/testemunho-telefone/src/main.ts */
     "./src/main.ts");
     /***/
   }

@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'pg-details',
     loadChildren: () => import('./pg-details/pg-details.module').then( m => m.PgDetailsPageModule)
   },
+  {
+    path: 'pg-add-phone',
+    loadChildren: () => import('./pg-add-phone/pg-add-phone.module').then( m => m.PgAddPhonePageModule)
+  },
 ];
 
 @NgModule({

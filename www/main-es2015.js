@@ -459,7 +459,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'home',
-        loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule)
+        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule)
     },
     {
         path: '',
@@ -469,6 +469,10 @@ const routes = [
     {
         path: 'pg-details',
         loadChildren: () => __webpack_require__.e(/*! import() | pg-details-pg-details-module */ "pg-details-pg-details-module").then(__webpack_require__.bind(null, /*! ./pg-details/pg-details.module */ "./src/app/pg-details/pg-details.module.ts")).then(m => m.PgDetailsPageModule)
+    },
+    {
+        path: 'pg-add-phone',
+        loadChildren: () => Promise.all(/*! import() | pg-add-phone-pg-add-phone-module */[__webpack_require__.e("common"), __webpack_require__.e("pg-add-phone-pg-add-phone-module")]).then(__webpack_require__.bind(null, /*! ./pg-add-phone/pg-add-phone.module */ "./src/app/pg-add-phone/pg-add-phone.module.ts")).then(m => m.PgAddPhonePageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -528,7 +532,9 @@ let AppComponent = class AppComponent {
     }
     initializeApp() {
         this.platform.ready().then(() => {
-            this.statusBar.styleDefault();
+            // this.statusBar.styleDefault();
+            this.statusBar.overlaysWebView(false);
+            this.statusBar.styleLightContent();
             this.splashScreen.hide();
         });
     }
@@ -585,6 +591,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
         entryComponents: [],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
+        exports: [],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
@@ -659,7 +666,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/work/NetBeansProjects/testemunho-telefone/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/leandro/NetBeansProjects/testemunho-telefone/src/main.ts */"./src/main.ts");
 
 
 /***/ })

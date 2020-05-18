@@ -1,3 +1,9 @@
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -532,6 +538,385 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }();
     /***/
 
+  },
+
+  /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html":
+  /*!*******************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html ***!
+    \*******************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppPgAddPhonePgAddPhonePageHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar mode=\"ios\">\n        <ion-buttons slot=\"start\" (click)=\"close()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/close.svg\" color=\"danger\"></ion-icon>\n        </ion-buttons>\n        <ion-title>\n            Adicionar Telefone\n        </ion-title>\n        <ion-buttons slot=\"end\" (click)=\"save()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/ok.svg\" color=\"success\"></ion-icon>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n  \n<ion-content>\n    <div class=\"home-header\">\n        <h1 class=\"title\">Adicionar</h1>\n    </div>\n    <div class=\"container\">\n        <ion-card class=\"card-history\">\n            <ion-card-header>\n                <ion-segment (ionChange)=\"segmentChanged($event)\" [(ngModel)]=\"segmentValue\">\n                    <ion-segment-button value=\"single\">\n                        <ion-label>Único</ion-label>\n                    </ion-segment-button>\n                    <ion-segment-button value=\"multiple\">\n                        <ion-label>Múltiplo</ion-label>\n                    </ion-segment-button>\n                </ion-segment>\n            </ion-card-header>\n            <ion-card-content>\n                <ion-item>\n                    <ion-label position=\"stacked\">DDD</ion-label>\n                    <ion-input inputmode=\"tel\" [(ngModel)]=\"ddd\" maxlength=\"2\"></ion-input>\n                </ion-item>\n\n                <div *ngIf=\"segmentValue === 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Telefone</ion-label>\n                        <ion-input appMyNumberOnly inputmode=\"tel\" maxlength=\"9\" [(ngModel)]=\"singlePhone\"></ion-input>\n                    </ion-item>\n                </div>\n                <div *ngIf=\"segmentValue !== 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Início Telefone</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"5\" [(ngModel)]=\"multiplePhone\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (de)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastStart\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (até)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastEnd\"></ion-input>\n                    </ion-item>\n                </div>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n  ";
+    /***/
+  },
+
+  /***/
+  "./src/app/pg-add-phone/pg-add-phone.page.scss":
+  /*!*****************************************************!*\
+    !*** ./src/app/pg-add-phone/pg-add-phone.page.scss ***!
+    \*****************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppPgAddPhonePgAddPhonePageScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BnLWFkZC1waG9uZS9wZy1hZGQtcGhvbmUucGFnZS5zY3NzIn0= */";
+    /***/
+  },
+
+  /***/
+  "./src/app/pg-add-phone/pg-add-phone.page.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/pg-add-phone/pg-add-phone.page.ts ***!
+    \***************************************************/
+
+  /*! exports provided: PgAddPhonePage */
+
+  /***/
+  function srcAppPgAddPhonePgAddPhonePageTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PgAddPhonePage", function () {
+      return PgAddPhonePage;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _utils_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../utils.service */
+    "./src/app/utils.service.ts");
+
+    var PgAddPhonePage =
+    /*#__PURE__*/
+    // tslint:disable-next-line: component-class-suffix
+    function () {
+      function PgAddPhonePage(modalController, utilsSrv) {
+        _classCallCheck(this, PgAddPhonePage);
+
+        this.modalController = modalController;
+        this.utilsSrv = utilsSrv;
+        this.segmentValue = 'single';
+      }
+
+      _createClass(PgAddPhonePage, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+      }, {
+        key: "close",
+        value: function close() {
+          this.modalController.dismiss({
+            reload: false
+          });
+        }
+      }, {
+        key: "validateData",
+        value: function validateData() {
+          var ret = {
+            error: false,
+            msg: ''
+          };
+          var vDDD = typeof this.ddd === 'undefined' ? 0 : parseInt(this.ddd, 10);
+          var vSinglePhone = typeof this.singlePhone !== 'undefined' ? this.singlePhone : '';
+          var vMultiplePhone = typeof this.multiplePhone !== 'undefined' ? this.multiplePhone : '';
+          var vMultipleLastStart = typeof this.multipleLastStart !== 'undefined' ? this.multipleLastStart : '';
+          var vMultipleLastEnd = typeof this.multipleLastEnd !== 'undefined' ? this.multipleLastEnd : '';
+
+          if (vDDD <= 0 || vDDD > 99) {
+            ret.error = true;
+            ret.msg = 'Informe o DDD entre 01 e 99';
+          } else {
+            if (this.segmentValue === 'single') {
+              if (vSinglePhone.length !== 9 && vSinglePhone.length !== 8) {
+                ret.error = true;
+                ret.msg = 'Informe o telefone com 8 ou 9 dígitos';
+              }
+            } else {
+              if (vMultiplePhone.length !== 5 && vMultiplePhone.length !== 4) {
+                ret.error = true;
+                ret.msg = 'Informe o início do telefone com 4 ou 5 dígitos';
+              } else if (vMultipleLastStart.length !== 4 || vMultipleLastEnd.length !== 4) {
+                ret.error = true;
+                ret.msg = 'Informe os últimos dígitos do telefone com 4 dígitos';
+              } else {
+                var minPhone = parseInt(this.multipleLastStart, 10);
+                var maxPhone = parseInt(this.multipleLastEnd, 10);
+
+                if (minPhone >= maxPhone) {
+                  ret.error = true;
+                  ret.msg = 'Informe o último número (de:) menor que o último número (para:)';
+                }
+              }
+            }
+          }
+
+          return ret;
+        }
+      }, {
+        key: "save",
+        value: function save() {
+          var retValidate = this.validateData();
+
+          if (retValidate.error) {
+            this.utilsSrv.showAlert('Alerta', '', retValidate.msg, ['OK']);
+          } else {
+            var arrPhones = [];
+            var phoneItem = {
+              ddd: '',
+              phone: ''
+            };
+            phoneItem.ddd = this.ddd.length === 1 ? '0' + this.ddd : this.ddd;
+
+            if (this.segmentValue === 'single') {
+              phoneItem.phone = this.singlePhone;
+              arrPhones.push(phoneItem);
+            } else {}
+
+            console.log(arrPhones);
+            this.modalController.dismiss({
+              reload: true,
+              newId: 0
+            });
+          }
+        }
+      }, {
+        key: "segmentChanged",
+        value: function segmentChanged(event) {// console.log(event);
+        }
+      }]);
+
+      return PgAddPhonePage;
+    }();
+
+    PgAddPhonePage.ctorParameters = function () {
+      return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+      }, {
+        type: _utils_service__WEBPACK_IMPORTED_MODULE_3__["UtilsService"]
+      }];
+    };
+
+    PgAddPhonePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-pg-add-phone',
+      template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! raw-loader!./pg-add-phone.page.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html"))["default"],
+      styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! ./pg-add-phone.page.scss */
+      "./src/app/pg-add-phone/pg-add-phone.page.scss"))["default"]]
+    }) // tslint:disable-next-line: component-class-suffix
+    ], PgAddPhonePage);
+    /***/
+  },
+
+  /***/
+  "./src/app/utils.service.ts":
+  /*!**********************************!*\
+    !*** ./src/app/utils.service.ts ***!
+    \**********************************/
+
+  /*! exports provided: UtilsService */
+
+  /***/
+  function srcAppUtilsServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "UtilsService", function () {
+      return UtilsService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+
+    var UtilsService = /*#__PURE__*/function () {
+      function UtilsService(loadingCtr, alertCtr, platform) {
+        _classCallCheck(this, UtilsService);
+
+        this.loadingCtr = loadingCtr;
+        this.alertCtr = alertCtr;
+        this.platform = platform;
+      }
+
+      _createClass(UtilsService, [{
+        key: "getAppVersion",
+        value: function getAppVersion() {
+          return '1.0.0';
+        }
+      }, {
+        key: "getLoader",
+        value: function getLoader(message, spinner) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+            var _this = this;
+
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    _context3.next = 2;
+                    return this.loadingCtr.create({
+                      message: message,
+                      spinner: spinner
+                    }).then(function (res) {
+                      res.present();
+                      var TIME_IN_MS = 5000;
+                      var hideFooterTimeout = setTimeout(function () {
+                        _this.closeLoader();
+                      }, TIME_IN_MS);
+                    });
+
+                  case 2:
+                    return _context3.abrupt("return", _context3.sent);
+
+                  case 3:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, this);
+          }));
+        }
+      }, {
+        key: "closeLoader",
+        value: function closeLoader() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    _context4.prev = 0;
+                    _context4.next = 3;
+                    return this.loadingCtr.dismiss();
+
+                  case 3:
+                    return _context4.abrupt("return", _context4.sent);
+
+                  case 6:
+                    _context4.prev = 6;
+                    _context4.t0 = _context4["catch"](0);
+                    return _context4.abrupt("return");
+
+                  case 9:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, this, [[0, 6]]);
+          }));
+        }
+      }, {
+        key: "showAlert",
+        value: function showAlert(header, subHeader, message, buttons) {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+            var alert;
+            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+              while (1) {
+                switch (_context5.prev = _context5.next) {
+                  case 0:
+                    _context5.next = 2;
+                    return this.alertCtr.create({
+                      header: header,
+                      subHeader: subHeader,
+                      message: message,
+                      buttons: buttons
+                    });
+
+                  case 2:
+                    alert = _context5.sent;
+                    _context5.next = 5;
+                    return alert.present();
+
+                  case 5:
+                    return _context5.abrupt("return", _context5.sent);
+
+                  case 6:
+                  case "end":
+                    return _context5.stop();
+                }
+              }
+            }, _callee5, this);
+          }));
+        }
+      }, {
+        key: "isMobileBrowser",
+        value: function isMobileBrowser() {
+          // is this web-browser on mobile device
+          return this.platform.is('mobileweb');
+        }
+      }]);
+
+      return UtilsService;
+    }();
+
+    UtilsService.ctorParameters = function () {
+      return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"]
+      }, {
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"]
+      }];
+    };
+
+    UtilsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], UtilsService);
+    /***/
   }
 }]);
 //# sourceMappingURL=common-es5.js.map
