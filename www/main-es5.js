@@ -213,7 +213,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       loadChildren: function loadChildren() {
         return Promise.all(
         /*! import() | home-home-module */
-        [__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~home-home-module~pg-add-content-pg-add-content-module~pg-details-pg-details-module"), __webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null,
         /*! ./home/home.module */
         "./src/app/home/home.module.ts")).then(function (m) {
           return m.HomePageModule;
@@ -224,11 +224,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       redirectTo: 'home',
       pathMatch: 'full'
     }, {
-      path: 'pg-details',
+      path: 'pg-details/:ddd/:phone',
       loadChildren: function loadChildren() {
-        return __webpack_require__.e(
+        return Promise.all(
         /*! import() | pg-details-pg-details-module */
-        "pg-details-pg-details-module").then(__webpack_require__.bind(null,
+        [__webpack_require__.e("default~home-home-module~pg-add-content-pg-add-content-module~pg-details-pg-details-module"), __webpack_require__.e("common"), __webpack_require__.e("pg-details-pg-details-module")]).then(__webpack_require__.bind(null,
         /*! ./pg-details/pg-details.module */
         "./src/app/pg-details/pg-details.module.ts")).then(function (m) {
           return m.PgDetailsPageModule;
@@ -243,6 +243,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         /*! ./pg-add-phone/pg-add-phone.module */
         "./src/app/pg-add-phone/pg-add-phone.module.ts")).then(function (m) {
           return m.PgAddPhonePageModule;
+        });
+      }
+    }, {
+      path: 'pg-add-content',
+      loadChildren: function loadChildren() {
+        return Promise.all(
+        /*! import() | pg-add-content-pg-add-content-module */
+        [__webpack_require__.e("default~home-home-module~pg-add-content-pg-add-content-module~pg-details-pg-details-module"), __webpack_require__.e("common"), __webpack_require__.e("pg-add-content-pg-add-content-module")]).then(__webpack_require__.bind(null,
+        /*! ./pg-add-content/pg-add-content.module */
+        "./src/app/pg-add-content/pg-add-content.module.ts")).then(function (m) {
+          return m.PgAddContentPageModule;
         });
       }
     }];
@@ -326,17 +337,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @ionic-native/status-bar/ngx */
-    "./node_modules/@ionic-native/status-bar/__ivy_ngcc__/ngx/index.js");
+    var _capacitor_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! @capacitor/core */
+    "./node_modules/@capacitor/core/dist/esm/index.js");
+
+    var StatusBar = _capacitor_core__WEBPACK_IMPORTED_MODULE_4__["Plugins"].StatusBar;
 
     var AppComponent = /*#__PURE__*/function () {
-      function AppComponent(platform, splashScreen, statusBar) {
+      function AppComponent(platform, splashScreen) {
         _classCallCheck(this, AppComponent);
 
         this.platform = platform;
         this.splashScreen = splashScreen;
-        this.statusBar = statusBar;
         this.initializeApp();
       }
 
@@ -346,10 +358,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var _this = this;
 
           this.platform.ready().then(function () {
-            // this.statusBar.styleDefault();
-            _this.statusBar.overlaysWebView(false);
-
-            _this.statusBar.styleLightContent();
+            StatusBar.setStyle({
+              style: _capacitor_core__WEBPACK_IMPORTED_MODULE_4__["StatusBarStyle"].Light
+            });
+            StatusBar.setOverlaysWebView({
+              overlay: true
+            });
 
             _this.splashScreen.hide();
           });
@@ -364,8 +378,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"]
       }, {
         type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"]
-      }, {
-        type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"]
       }];
     };
 
@@ -463,7 +475,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
       entryComponents: [],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
-      exports: [],
       providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]

@@ -1,3 +1,23 @@
+.toolbar-title {
+    overflow: visible;
+    position: relative;
+
+    .title {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: -7px;
+    }
+
+    .subtitle {
+        font-size: 66%;
+        color: #888;
+    }
+}
+.container {
+    margin: 24vh 5% 0 5%;
+}
 ion-card {
   margin-bottom: 5vh;
   cursor: pointer;
@@ -10,3 +30,19 @@ ion-card {
   right: 18px;
   top: -17px;
 }
+ion-searchbar {
+    padding: 0 9%;
+    margin-top: -17px;
+    color: #FFF;
+}
+.last-contact {
+    font-size: 0.9em;
+}
+
+/* android only */
+.md {
+    ion-searchbar {
+        color: #000;
+    }
+}
+/* ============ */

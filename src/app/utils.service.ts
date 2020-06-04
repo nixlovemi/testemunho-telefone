@@ -13,7 +13,7 @@ export class UtilsService {
   ) { }
 
   public getAppVersion() {
-    return '1.0.0';
+    return '1.0.2';
   }
 
   async getLoader(message: any, spinner: any) {

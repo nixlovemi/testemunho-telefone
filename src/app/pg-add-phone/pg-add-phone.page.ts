@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
+const { Keyboard } = Plugins;
+
 import { UtilsService } from '../utils.service';
+import { DatabaseService } from './../database.service';
 
 @Component({
   selector: 'app-pg-add-phone',
@@ -18,7 +22,8 @@ export class PgAddPhonePage implements OnInit {
 
     constructor(
         public modalController: ModalController,
-        private utilsSrv: UtilsService
+        private utilsSrv: UtilsService,
+        private db: DatabaseService,
     ) { }
 
     ngOnInit() {
@@ -65,6 +70,9 @@ export class PgAddPhonePage implements OnInit {
                     if (minPhone >= maxPhone){
                         ret.error = true;
                         ret.msg   = 'Informe o último número (de:) menor que o último número (para:)';
+                    } else if (maxPhone - minPhone > 100) {
+                        ret.error = true;
+                        ret.msg   = 'Só é permitido inserir 100 números por vez!';
                     }
                 }
             }
@@ -73,31 +81,39 @@ export class PgAddPhonePage implements OnInit {
         return ret;
     }
 
-    save() {
+    async save() {
+        Keyboard.hide();
+
         const retValidate = this.validateData();
         if (retValidate.error){
             this.utilsSrv.showAlert('Alerta', '', retValidate.msg, ['OK']);
         } else {
-            const arrPhones = [];
-            const phoneItem = {
-                ddd : '',
-                phone : ''
-            };
-            phoneItem.ddd = (this.ddd.length === 1) ? '0' + this.ddd : this.ddd;
-
             if (this.segmentValue === 'single'){
-                phoneItem.phone = this.singlePhone;
-                arrPhones.push(phoneItem);
+                const retInsert = await this.db.addPhone(
+                    (this.ddd.length === 1) ? '0' + this.ddd : this.ddd,
+                    this.singlePhone
+                );
             } else {
-                
+                const minPhone = parseInt(this.multipleLastStart, 10);
+                const maxPhone = parseInt(this.multipleLastEnd, 10);
+
+                for (let i = minPhone; i <= maxPhone; i++){
+                    const currentI: string = i + '';
+                    const sPhone    = currentI.padStart(4, '0');
+
+                    const retInsert = await this.db.addPhone(
+                        (this.ddd.length === 1) ? '0' + this.ddd : this.ddd,
+                        this.multiplePhone + sPhone
+                    );
+                }
             }
 
-            console.log(arrPhones);
-
-            this.modalController.dismiss({
-                reload: true,
-                newId: 0
-            });
+            setTimeout(() => {
+                this.modalController.dismiss({
+                    reload: true,
+                    newId: 0
+                });
+            }, 400);
         }
     }
 

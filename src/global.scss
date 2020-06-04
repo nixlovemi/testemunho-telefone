@@ -32,6 +32,10 @@ ion-header {
     position: relative;
     z-index: 9999;
 }
+ion-toolbar {
+    --background: #FFF /*#315182*/;
+    --color: #000 /*#FFF*/;
+}
 .home-header {
     width: 100%;
     position: absolute;
@@ -54,7 +58,7 @@ ion-header {
 }
 .container {
     width: 90%;
-    margin: 14vh 5% 0 5%;
+    margin: 16vh 5% 0 5%;
     position: relative;
     z-index: 10;
     padding-bottom: 65px;
@@ -75,3 +79,21 @@ ion-card-title{
 .card-history {
     padding: 0 16px;
 }
+
+/* android only */
+.md {
+    ion-header {
+        padding-top: 4vh;
+    }
+    .toolbar-title {
+        text-align: center;
+
+        .subtitle {
+            text-align: center;
+        }
+    }
+    .home-header {
+        background: rgb(74,110,167) !important;
+    }
+}
+/* ============ */

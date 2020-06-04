@@ -541,6 +541,26 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
 
   /***/
+  "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-content/pg-add-content.page.html":
+  /*!***********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-content/pg-add-content.page.html ***!
+    \***********************************************************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppPgAddContentPgAddContentPageHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar> <!-- mode=\"ios\" -->\n        <ion-buttons slot=\"start\" (click)=\"close()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/close.svg\" color=\"danger\"></ion-icon>\n        </ion-buttons>\n        <ion-title class=\"toolbar-title\">\n            {{ strTitle }} Registro\n        </ion-title>\n        <ion-buttons slot=\"end\" (click)=\"save()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/ok.svg\" color=\"success\"></ion-icon>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n  \n<ion-content>\n    <div class=\"home-header\">\n        <h1 class=\"title\">{{ strTitle }}</h1>\n    </div>\n    <div class=\"container\">\n        <ion-card class=\"card-history\">\n            <ion-card-content>\n                <ion-item>\n                    <ion-label position=\"stacked\">Data *</ion-label>\n                    <ion-datetime\n                        name=\"mes_base\"\n                        [(ngModel)]=\"frmContent.date\"\n                        display-format=\"DD/MM/YYYY\"\n                        picker-format=\"DD MMMM YYYY\"\n                        month-names=\"Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro\"\n                        (ionCancel)=\"clearInput('date')\"\n                        cancelText=\"Limpar\"\n                        doneText=\"Selecionar\"\n                        class=\"ion-text-start\"\n                    ></ion-datetime>\n                </ion-item>\n                <ion-item>\n                    <ion-label position=\"stacked\">Tipo *</ion-label>\n                    <ion-select interface=\"action-sheet\" [(ngModel)]=\"frmContent.type\"> <!-- popover -->\n                        <ion-select-option *ngFor=\"let type of arrContactTypes\" [value]=\"type\">{{ type }}</ion-select-option>\n                    </ion-select>\n                </ion-item>\n                <ion-item>\n                    <ion-label position=\"stacked\">Nome</ion-label>\n                    <ion-input [(ngModel)]=\"frmContent.name\"></ion-input>\n                </ion-item>\n                <ion-item>\n                    <ion-label position=\"stacked\">Texto</ion-label>\n                    <ion-input [(ngModel)]=\"frmContent.text\"></ion-input>\n                </ion-item>\n                <ion-item>\n                    <ion-label position=\"stacked\">Publicação</ion-label>\n                    <ion-input [(ngModel)]=\"frmContent.publication\"></ion-input>\n                </ion-item>\n                <ion-item>\n                    <ion-label position=\"stacked\">Anotações *</ion-label>\n                    <ion-textarea [(ngModel)]=\"frmContent.notes\" autoGrow=\"true\"></ion-textarea>\n                </ion-item>\n            </ion-card-content>\n\n            <ion-button (click)=\"delete()\" *ngIf=\"type === 'edit'\" color=\"danger\" expand=\"block\" id=\"btn-delete\">\n                <ion-icon slot=\"start\" src=\"assets/trash.svg\"></ion-icon>\n                Deletar Registro\n            </ion-button>\n        </ion-card>\n    </div>\n</ion-content>\n  ";
+    /***/
+  },
+
+  /***/
   "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html":
   /*!*******************************************************************************************!*\
     !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-phone/pg-add-phone.page.html ***!
@@ -556,7 +576,350 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar mode=\"ios\">\n        <ion-buttons slot=\"start\" (click)=\"close()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/close.svg\" color=\"danger\"></ion-icon>\n        </ion-buttons>\n        <ion-title>\n            Adicionar Telefone\n        </ion-title>\n        <ion-buttons slot=\"end\" (click)=\"save()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/ok.svg\" color=\"success\"></ion-icon>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n  \n<ion-content>\n    <div class=\"home-header\">\n        <h1 class=\"title\">Adicionar</h1>\n    </div>\n    <div class=\"container\">\n        <ion-card class=\"card-history\">\n            <ion-card-header>\n                <ion-segment (ionChange)=\"segmentChanged($event)\" [(ngModel)]=\"segmentValue\">\n                    <ion-segment-button value=\"single\">\n                        <ion-label>Único</ion-label>\n                    </ion-segment-button>\n                    <ion-segment-button value=\"multiple\">\n                        <ion-label>Múltiplo</ion-label>\n                    </ion-segment-button>\n                </ion-segment>\n            </ion-card-header>\n            <ion-card-content>\n                <ion-item>\n                    <ion-label position=\"stacked\">DDD</ion-label>\n                    <ion-input inputmode=\"tel\" [(ngModel)]=\"ddd\" maxlength=\"2\"></ion-input>\n                </ion-item>\n\n                <div *ngIf=\"segmentValue === 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Telefone</ion-label>\n                        <ion-input appMyNumberOnly inputmode=\"tel\" maxlength=\"9\" [(ngModel)]=\"singlePhone\"></ion-input>\n                    </ion-item>\n                </div>\n                <div *ngIf=\"segmentValue !== 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Início Telefone</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"5\" [(ngModel)]=\"multiplePhone\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (de)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastStart\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (até)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastEnd\"></ion-input>\n                    </ion-item>\n                </div>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n  ";
+    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar> <!-- mode=\"ios\" -->\n        <ion-buttons slot=\"start\" (click)=\"close()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/close.svg\" color=\"danger\"></ion-icon>\n        </ion-buttons>\n        <ion-title class=\"toolbar-title\">\n            Adicionar Telefone\n        </ion-title>\n        <ion-buttons slot=\"end\" (click)=\"save()\">\n            <ion-icon class=\"icon-header\" slot=\"icon-only\" src=\"assets/ok.svg\" color=\"success\"></ion-icon>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n  \n<ion-content>\n    <div class=\"home-header\">\n        <h1 class=\"title\">Adicionar</h1>\n    </div>\n    <div class=\"container\">\n        <ion-card class=\"card-history\">\n            <ion-card-header>\n                <ion-segment (ionChange)=\"segmentChanged($event)\" [(ngModel)]=\"segmentValue\">\n                    <ion-segment-button value=\"single\">\n                        <ion-label>Único</ion-label>\n                    </ion-segment-button>\n                    <ion-segment-button value=\"multiple\">\n                        <ion-label>Múltiplo</ion-label>\n                    </ion-segment-button>\n                </ion-segment>\n            </ion-card-header>\n            <ion-card-content>\n                <ion-item>\n                    <ion-label position=\"stacked\">DDD</ion-label>\n                    <ion-input inputmode=\"tel\" [(ngModel)]=\"ddd\" maxlength=\"2\"></ion-input>\n                </ion-item>\n\n                <div *ngIf=\"segmentValue === 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Telefone</ion-label>\n                        <ion-input appMyNumberOnly inputmode=\"tel\" maxlength=\"9\" [(ngModel)]=\"singlePhone\"></ion-input>\n                    </ion-item>\n                </div>\n                <div *ngIf=\"segmentValue !== 'single'\">\n                    <ion-item>\n                        <ion-label position=\"stacked\">Início Telefone</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"5\" [(ngModel)]=\"multiplePhone\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (de)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastStart\"></ion-input>\n                    </ion-item>\n                    <ion-item>\n                        <ion-label position=\"stacked\">Últimos dígitos (até)</ion-label>\n                        <ion-input inputmode=\"tel\" maxlength=\"4\" [(ngModel)]=\"multipleLastEnd\"></ion-input>\n                    </ion-item>\n                </div>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>\n  ";
+    /***/
+  },
+
+  /***/
+  "./src/app/pg-add-content/pg-add-content.page.scss":
+  /*!*********************************************************!*\
+    !*** ./src/app/pg-add-content/pg-add-content.page.scss ***!
+    \*********************************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function srcAppPgAddContentPgAddContentPageScss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+
+
+    __webpack_exports__["default"] = "ion-card-content {\n  padding-left: 0 !important;\n}\n\n.card-history {\n  padding: 0 16px 20px 16px;\n}\n\n#btn-delete {\n  font-size: 14px;\n}\n\n#btn-delete ion-icon {\n  font-size: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvL05ldEJlYW5zUHJvamVjdHMvdGVzdGVtdW5oby10ZWxlZm9uZS9zcmMvYXBwL3BnLWFkZC1jb250ZW50L3BnLWFkZC1jb250ZW50LnBhZ2Uuc2NzcyIsInNyYy9hcHAvcGctYWRkLWNvbnRlbnQvcGctYWRkLWNvbnRlbnQucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksMEJBQUE7QUNDSjs7QURDQTtFQUNJLHlCQUFBO0FDRUo7O0FEQUE7RUFDSSxlQUFBO0FDR0o7O0FEREk7RUFDSSxlQUFBO0FDR1IiLCJmaWxlIjoic3JjL2FwcC9wZy1hZGQtY29udGVudC9wZy1hZGQtY29udGVudC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY2FyZC1jb250ZW50IHtcbiAgICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn1cbi5jYXJkLWhpc3Rvcnkge1xuICAgIHBhZGRpbmc6IDAgMTZweCAyMHB4IDE2cHg7XG59XG4jYnRuLWRlbGV0ZSB7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuXG4gICAgaW9uLWljb24ge1xuICAgICAgICBmb250LXNpemU6IDEycHg7XG4gICAgfVxufSIsImlvbi1jYXJkLWNvbnRlbnQge1xuICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn1cblxuLmNhcmQtaGlzdG9yeSB7XG4gIHBhZGRpbmc6IDAgMTZweCAyMHB4IDE2cHg7XG59XG5cbiNidG4tZGVsZXRlIHtcbiAgZm9udC1zaXplOiAxNHB4O1xufVxuI2J0bi1kZWxldGUgaW9uLWljb24ge1xuICBmb250LXNpemU6IDEycHg7XG59Il19 */";
+    /***/
+  },
+
+  /***/
+  "./src/app/pg-add-content/pg-add-content.page.ts":
+  /*!*******************************************************!*\
+    !*** ./src/app/pg-add-content/pg-add-content.page.ts ***!
+    \*******************************************************/
+
+  /*! exports provided: PgAddContentPage */
+
+  /***/
+  function srcAppPgAddContentPgAddContentPageTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "PgAddContentPage", function () {
+      return PgAddContentPage;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @ionic/angular */
+    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+    /* harmony import */
+
+
+    var _capacitor_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @capacitor/core */
+    "./node_modules/@capacitor/core/dist/esm/index.js");
+    /* harmony import */
+
+
+    var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! moment */
+    "./node_modules/moment/moment.js");
+    /* harmony import */
+
+
+    var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+    /* harmony import */
+
+
+    var _utils_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../utils.service */
+    "./src/app/utils.service.ts");
+    /* harmony import */
+
+
+    var _database_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ./../database.service */
+    "./src/app/database.service.ts");
+
+    var Keyboard = _capacitor_core__WEBPACK_IMPORTED_MODULE_3__["Plugins"].Keyboard;
+
+    var PgAddContentPage =
+    /*#__PURE__*/
+    // tslint:disable-next-line: component-class-suffix
+    function () {
+      function PgAddContentPage(modalController, utilsSrv, db, zone) {
+        _classCallCheck(this, PgAddContentPage);
+
+        this.modalController = modalController;
+        this.utilsSrv = utilsSrv;
+        this.db = db;
+        this.zone = zone;
+        this.strTitle = '';
+        this.arrContactTypes = [];
+        this.frmContent = {
+          date: '',
+          type: '',
+          name: '',
+          text: '',
+          publication: '',
+          notes: ''
+        };
+        this.arrContactTypes = db.getContactTypes();
+      }
+
+      _createClass(PgAddContentPage, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+            var retContact;
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    this.frmContent.date = moment__WEBPACK_IMPORTED_MODULE_4__().format('YYYY-MM-DD');
+                    this.strTitle = this.type === 'edit' ? 'Editar' : 'Adicionar';
+                    _context3.next = 4;
+                    return this.db.getContact(this.ddd, this.phone, this.idx);
+
+                  case 4:
+                    retContact = _context3.sent;
+
+                    if (retContact !== false) {
+                      this.frmContent.date = retContact.date;
+                      this.frmContent.type = retContact.type;
+                      this.frmContent.name = retContact.name;
+                      this.frmContent.text = retContact.text;
+                      this.frmContent.publication = retContact.publication;
+                      this.frmContent.notes = retContact.anotations;
+                    }
+
+                  case 6:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, this);
+          }));
+        }
+      }, {
+        key: "close",
+        value: function close() {
+          this.modalController.dismiss({
+            reload: false
+          });
+        }
+      }, {
+        key: "clearInput",
+        value: function clearInput(element) {
+          this.frmContent[element] = '';
+        }
+      }, {
+        key: "validateData",
+        value: function validateData() {
+          var ret = {
+            error: false,
+            msg: ''
+          };
+
+          if (this.frmContent.date === '') {
+            ret.error = true;
+            ret.msg = 'Informe a data';
+          } else if (this.frmContent.type === '') {
+            ret.error = true;
+            ret.msg = 'Selecione o tipo';
+          } else if (this.frmContent.notes.trim().length < 2) {
+            ret.error = true;
+            ret.msg = 'Insira uma anotação';
+          }
+
+          return ret;
+        }
+      }, {
+        key: "save",
+        value: function save() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
+            var _this = this;
+
+            var retValidate, ret, _ret;
+
+            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+              while (1) {
+                switch (_context4.prev = _context4.next) {
+                  case 0:
+                    Keyboard.hide();
+                    retValidate = this.validateData();
+
+                    if (!retValidate.error) {
+                      _context4.next = 6;
+                      break;
+                    }
+
+                    this.utilsSrv.showAlert('Alerta', '', retValidate.msg, ['OK']);
+                    _context4.next = 17;
+                    break;
+
+                  case 6:
+                    this.contactInfo = {
+                      ddd: this.ddd,
+                      phone: this.phone,
+                      date: this.frmContent.date,
+                      type: this.frmContent.type,
+                      name: this.frmContent.name,
+                      text: this.frmContent.text,
+                      publication: this.frmContent.publication,
+                      anotations: this.frmContent.notes
+                    };
+
+                    if (!(this.type === 'edit')) {
+                      _context4.next = 13;
+                      break;
+                    }
+
+                    _context4.next = 10;
+                    return this.db.editContact(this.contactInfo, this.idx);
+
+                  case 10:
+                    ret = _context4.sent;
+                    _context4.next = 16;
+                    break;
+
+                  case 13:
+                    _context4.next = 15;
+                    return this.db.addContact(this.contactInfo);
+
+                  case 15:
+                    _ret = _context4.sent;
+
+                  case 16:
+                    setTimeout(function () {
+                      _this.modalController.dismiss({
+                        reload: true
+                      });
+                    }, 400);
+
+                  case 17:
+                  case "end":
+                    return _context4.stop();
+                }
+              }
+            }, _callee4, this);
+          }));
+        }
+      }, {
+        key: "delete",
+        value: function _delete() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
+            var _this2 = this;
+
+            return regeneratorRuntime.wrap(function _callee5$(_context5) {
+              while (1) {
+                switch (_context5.prev = _context5.next) {
+                  case 0:
+                    this.utilsSrv.showAlert('Confirmação!', '', 'Deseja realmente deletar esse registro? Essa ação não poderá ser desfeita.', [{
+                      text: 'Não ...',
+                      role: 'cancel',
+                      cssClass: 'secondary',
+                      handler: function handler(blah) {}
+                    }, {
+                      text: 'Sim!',
+                      handler: function handler() {
+                        _this2.postDelete();
+                      }
+                    }]);
+
+                  case 1:
+                  case "end":
+                    return _context5.stop();
+                }
+              }
+            }, _callee5, this);
+          }));
+        }
+      }, {
+        key: "postDelete",
+        value: function postDelete() {
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee6() {
+            var ret;
+            return regeneratorRuntime.wrap(function _callee6$(_context6) {
+              while (1) {
+                switch (_context6.prev = _context6.next) {
+                  case 0:
+                    _context6.next = 2;
+                    return this.db.deleteContact(this.ddd, this.phone, this.idx);
+
+                  case 2:
+                    ret = _context6.sent;
+
+                    if (ret) {
+                      this.modalController.dismiss({
+                        reload: true
+                      });
+                    }
+
+                  case 4:
+                  case "end":
+                    return _context6.stop();
+                }
+              }
+            }, _callee6, this);
+          }));
+        }
+      }]);
+
+      return PgAddContentPage;
+    }();
+
+    PgAddContentPage.ctorParameters = function () {
+      return [{
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
+      }, {
+        type: _utils_service__WEBPACK_IMPORTED_MODULE_5__["UtilsService"]
+      }, {
+        type: _database_service__WEBPACK_IMPORTED_MODULE_6__["DatabaseService"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgZone"]
+      }];
+    };
+
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PgAddContentPage.prototype, "type", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PgAddContentPage.prototype, "ddd", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PgAddContentPage.prototype, "phone", void 0);
+    Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], PgAddContentPage.prototype, "idx", void 0);
+    PgAddContentPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-pg-add-content',
+      template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! raw-loader!./pg-add-content.page.html */
+      "./node_modules/raw-loader/dist/cjs.js!./src/app/pg-add-content/pg-add-content.page.html"))["default"],
+      styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
+      /*! ./pg-add-content.page.scss */
+      "./src/app/pg-add-content/pg-add-content.page.scss"))["default"]]
+    }) // tslint:disable-next-line: component-class-suffix
+    ], PgAddContentPage);
     /***/
   },
 
@@ -576,7 +939,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BnLWFkZC1waG9uZS9wZy1hZGQtcGhvbmUucGFnZS5zY3NzIn0= */";
+    __webpack_exports__["default"] = "ion-card-content {\n  padding-left: 0 !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvL05ldEJlYW5zUHJvamVjdHMvdGVzdGVtdW5oby10ZWxlZm9uZS9zcmMvYXBwL3BnLWFkZC1waG9uZS9wZy1hZGQtcGhvbmUucGFnZS5zY3NzIiwic3JjL2FwcC9wZy1hZGQtcGhvbmUvcGctYWRkLXBob25lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDBCQUFBO0FDQ0oiLCJmaWxlIjoic3JjL2FwcC9wZy1hZGQtcGhvbmUvcGctYWRkLXBob25lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jYXJkLWNvbnRlbnQge1xuICAgIHBhZGRpbmctbGVmdDogMCAhaW1wb3J0YW50O1xufSIsImlvbi1jYXJkLWNvbnRlbnQge1xuICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn0iXX0= */";
     /***/
   },
 
@@ -620,19 +983,34 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     /* harmony import */
 
 
-    var _utils_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _capacitor_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @capacitor/core */
+    "./node_modules/@capacitor/core/dist/esm/index.js");
+    /* harmony import */
+
+
+    var _utils_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../utils.service */
     "./src/app/utils.service.ts");
+    /* harmony import */
+
+
+    var _database_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ./../database.service */
+    "./src/app/database.service.ts");
+
+    var Keyboard = _capacitor_core__WEBPACK_IMPORTED_MODULE_3__["Plugins"].Keyboard;
 
     var PgAddPhonePage =
     /*#__PURE__*/
     // tslint:disable-next-line: component-class-suffix
     function () {
-      function PgAddPhonePage(modalController, utilsSrv) {
+      function PgAddPhonePage(modalController, utilsSrv, db) {
         _classCallCheck(this, PgAddPhonePage);
 
         this.modalController = modalController;
         this.utilsSrv = utilsSrv;
+        this.db = db;
         this.segmentValue = 'single';
       }
 
@@ -682,6 +1060,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 if (minPhone >= maxPhone) {
                   ret.error = true;
                   ret.msg = 'Informe o último número (de:) menor que o último número (para:)';
+                } else if (maxPhone - minPhone > 100) {
+                  ret.error = true;
+                  ret.msg = 'Só é permitido inserir 100 números por vez!';
                 }
               }
             }
@@ -692,29 +1073,80 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }, {
         key: "save",
         value: function save() {
-          var retValidate = this.validateData();
+          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee7() {
+            var _this3 = this;
 
-          if (retValidate.error) {
-            this.utilsSrv.showAlert('Alerta', '', retValidate.msg, ['OK']);
-          } else {
-            var arrPhones = [];
-            var phoneItem = {
-              ddd: '',
-              phone: ''
-            };
-            phoneItem.ddd = this.ddd.length === 1 ? '0' + this.ddd : this.ddd;
+            var retValidate, retInsert, minPhone, maxPhone, i, currentI, sPhone, _retInsert;
 
-            if (this.segmentValue === 'single') {
-              phoneItem.phone = this.singlePhone;
-              arrPhones.push(phoneItem);
-            } else {}
+            return regeneratorRuntime.wrap(function _callee7$(_context7) {
+              while (1) {
+                switch (_context7.prev = _context7.next) {
+                  case 0:
+                    Keyboard.hide();
+                    retValidate = this.validateData();
 
-            console.log(arrPhones);
-            this.modalController.dismiss({
-              reload: true,
-              newId: 0
-            });
-          }
+                    if (!retValidate.error) {
+                      _context7.next = 6;
+                      break;
+                    }
+
+                    this.utilsSrv.showAlert('Alerta', '', retValidate.msg, ['OK']);
+                    _context7.next = 25;
+                    break;
+
+                  case 6:
+                    if (!(this.segmentValue === 'single')) {
+                      _context7.next = 12;
+                      break;
+                    }
+
+                    _context7.next = 9;
+                    return this.db.addPhone(this.ddd.length === 1 ? '0' + this.ddd : this.ddd, this.singlePhone);
+
+                  case 9:
+                    retInsert = _context7.sent;
+                    _context7.next = 24;
+                    break;
+
+                  case 12:
+                    minPhone = parseInt(this.multipleLastStart, 10);
+                    maxPhone = parseInt(this.multipleLastEnd, 10);
+                    i = minPhone;
+
+                  case 15:
+                    if (!(i <= maxPhone)) {
+                      _context7.next = 24;
+                      break;
+                    }
+
+                    currentI = i + '';
+                    sPhone = currentI.padStart(4, '0');
+                    _context7.next = 20;
+                    return this.db.addPhone(this.ddd.length === 1 ? '0' + this.ddd : this.ddd, this.multiplePhone + sPhone);
+
+                  case 20:
+                    _retInsert = _context7.sent;
+
+                  case 21:
+                    i++;
+                    _context7.next = 15;
+                    break;
+
+                  case 24:
+                    setTimeout(function () {
+                      _this3.modalController.dismiss({
+                        reload: true,
+                        newId: 0
+                      });
+                    }, 400);
+
+                  case 25:
+                  case "end":
+                    return _context7.stop();
+                }
+              }
+            }, _callee7, this);
+          }));
         }
       }, {
         key: "segmentChanged",
@@ -729,7 +1161,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       return [{
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["ModalController"]
       }, {
-        type: _utils_service__WEBPACK_IMPORTED_MODULE_3__["UtilsService"]
+        type: _utils_service__WEBPACK_IMPORTED_MODULE_4__["UtilsService"]
+      }, {
+        type: _database_service__WEBPACK_IMPORTED_MODULE_5__["DatabaseService"]
       }];
     };
 
@@ -743,179 +1177,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       "./src/app/pg-add-phone/pg-add-phone.page.scss"))["default"]]
     }) // tslint:disable-next-line: component-class-suffix
     ], PgAddPhonePage);
-    /***/
-  },
-
-  /***/
-  "./src/app/utils.service.ts":
-  /*!**********************************!*\
-    !*** ./src/app/utils.service.ts ***!
-    \**********************************/
-
-  /*! exports provided: UtilsService */
-
-  /***/
-  function srcAppUtilsServiceTs(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony export (binding) */
-
-
-    __webpack_require__.d(__webpack_exports__, "UtilsService", function () {
-      return UtilsService;
-    });
-    /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
-    /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-    /* harmony import */
-
-
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @ionic/angular */
-    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-
-    var UtilsService = /*#__PURE__*/function () {
-      function UtilsService(loadingCtr, alertCtr, platform) {
-        _classCallCheck(this, UtilsService);
-
-        this.loadingCtr = loadingCtr;
-        this.alertCtr = alertCtr;
-        this.platform = platform;
-      }
-
-      _createClass(UtilsService, [{
-        key: "getAppVersion",
-        value: function getAppVersion() {
-          return '1.0.0';
-        }
-      }, {
-        key: "getLoader",
-        value: function getLoader(message, spinner) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
-            var _this = this;
-
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
-              while (1) {
-                switch (_context3.prev = _context3.next) {
-                  case 0:
-                    _context3.next = 2;
-                    return this.loadingCtr.create({
-                      message: message,
-                      spinner: spinner
-                    }).then(function (res) {
-                      res.present();
-                      var TIME_IN_MS = 5000;
-                      var hideFooterTimeout = setTimeout(function () {
-                        _this.closeLoader();
-                      }, TIME_IN_MS);
-                    });
-
-                  case 2:
-                    return _context3.abrupt("return", _context3.sent);
-
-                  case 3:
-                  case "end":
-                    return _context3.stop();
-                }
-              }
-            }, _callee3, this);
-          }));
-        }
-      }, {
-        key: "closeLoader",
-        value: function closeLoader() {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee4() {
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
-              while (1) {
-                switch (_context4.prev = _context4.next) {
-                  case 0:
-                    _context4.prev = 0;
-                    _context4.next = 3;
-                    return this.loadingCtr.dismiss();
-
-                  case 3:
-                    return _context4.abrupt("return", _context4.sent);
-
-                  case 6:
-                    _context4.prev = 6;
-                    _context4.t0 = _context4["catch"](0);
-                    return _context4.abrupt("return");
-
-                  case 9:
-                  case "end":
-                    return _context4.stop();
-                }
-              }
-            }, _callee4, this, [[0, 6]]);
-          }));
-        }
-      }, {
-        key: "showAlert",
-        value: function showAlert(header, subHeader, message, buttons) {
-          return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee5() {
-            var alert;
-            return regeneratorRuntime.wrap(function _callee5$(_context5) {
-              while (1) {
-                switch (_context5.prev = _context5.next) {
-                  case 0:
-                    _context5.next = 2;
-                    return this.alertCtr.create({
-                      header: header,
-                      subHeader: subHeader,
-                      message: message,
-                      buttons: buttons
-                    });
-
-                  case 2:
-                    alert = _context5.sent;
-                    _context5.next = 5;
-                    return alert.present();
-
-                  case 5:
-                    return _context5.abrupt("return", _context5.sent);
-
-                  case 6:
-                  case "end":
-                    return _context5.stop();
-                }
-              }
-            }, _callee5, this);
-          }));
-        }
-      }, {
-        key: "isMobileBrowser",
-        value: function isMobileBrowser() {
-          // is this web-browser on mobile device
-          return this.platform.is('mobileweb');
-        }
-      }]);
-
-      return UtilsService;
-    }();
-
-    UtilsService.ctorParameters = function () {
-      return [{
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["LoadingController"]
-      }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["AlertController"]
-      }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"]
-      }];
-    };
-
-    UtilsService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
-      providedIn: 'root'
-    })], UtilsService);
     /***/
   }
 }]);

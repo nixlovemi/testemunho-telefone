@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-toolbar> <!-- mode="ios" -->
+        <ion-buttons slot="start" (click)="close()">
+            <ion-icon class="icon-header" slot="icon-only" src="assets/close.svg" color="danger"></ion-icon>
+        </ion-buttons>
+        <ion-title class="toolbar-title">
+            {{ strTitle }} Registro
+        </ion-title>
+        <ion-buttons slot="end" (click)="save()">
+            <ion-icon class="icon-header" slot="icon-only" src="assets/ok.svg" color="success"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+  
+<ion-content>
+    <div class="home-header">
+        <h1 class="title">{{ strTitle }}</h1>
+    </div>
+    <div class="container">
+        <ion-card class="card-history">
+            <ion-card-content>
+                <ion-item>
+                    <ion-label position="stacked">Data *</ion-label>
+                    <ion-datetime
+                        name="mes_base"
+                        [(ngModel)]="frmContent.date"
+                        display-format="DD/MM/YYYY"
+                        picker-format="DD MMMM YYYY"
+                        month-names="Janeiro, Fevereiro, Março, Abril, Maio, Junho, Julho, Agosto, Setembro, Outubro, Novembro, Dezembro"
+                        (ionCancel)="clearInput('date')"
+                        cancelText="Limpar"
+                        doneText="Selecionar"
+                        class="ion-text-start"
+                    ></ion-datetime>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Tipo *</ion-label>
+                    <ion-select interface="action-sheet" [(ngModel)]="frmContent.type"> <!-- popover -->
+                        <ion-select-option *ngFor="let type of arrContactTypes" [value]="type">{{ type }}</ion-select-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Nome</ion-label>
+                    <ion-input [(ngModel)]="frmContent.name"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Texto</ion-label>
+                    <ion-input [(ngModel)]="frmContent.text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Publicação</ion-label>
+                    <ion-input [(ngModel)]="frmContent.publication"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Anotações *</ion-label>
+                    <ion-textarea [(ngModel)]="frmContent.notes" autoGrow="true"></ion-textarea>
+                </ion-item>
+            </ion-card-content>
+
+            <ion-button (click)="delete()" *ngIf="type === 'edit'" color="danger" expand="block" id="btn-delete">
+                <ion-icon slot="start" src="assets/trash.svg"></ion-icon>
+                Deletar Registro
+            </ion-button>
+        </ion-card>
+    </div>
+</ion-content>
+  

@@ -459,7 +459,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     {
         path: 'home',
-        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule)
+        loadChildren: () => Promise.all(/*! import() | home-home-module */[__webpack_require__.e("default~home-home-module~pg-add-content-pg-add-content-module~pg-details-pg-details-module"), __webpack_require__.e("common"), __webpack_require__.e("home-home-module")]).then(__webpack_require__.bind(null, /*! ./home/home.module */ "./src/app/home/home.module.ts")).then(m => m.HomePageModule)
     },
     {
         path: '',
@@ -467,12 +467,16 @@ const routes = [
         pathMatch: 'full'
     },
     {
-        path: 'pg-details',
-        loadChildren: () => __webpack_require__.e(/*! import() | pg-details-pg-details-module */ "pg-details-pg-details-module").then(__webpack_require__.bind(null, /*! ./pg-details/pg-details.module */ "./src/app/pg-details/pg-details.module.ts")).then(m => m.PgDetailsPageModule)
+        path: 'pg-details/:ddd/:phone',
+        loadChildren: () => Promise.all(/*! import() | pg-details-pg-details-module */[__webpack_require__.e("default~home-home-module~pg-add-content-pg-add-content-module~pg-details-pg-details-module"), __webpack_require__.e("common"), __webpack_require__.e("pg-details-pg-details-module")]).then(__webpack_require__.bind(null, /*! ./pg-details/pg-details.module */ "./src/app/pg-details/pg-details.module.ts")).then(m => m.PgDetailsPageModule)
     },
     {
         path: 'pg-add-phone',
         loadChildren: () => Promise.all(/*! import() | pg-add-phone-pg-add-phone-module */[__webpack_require__.e("common"), __webpack_require__.e("pg-add-phone-pg-add-phone-module")]).then(__webpack_require__.bind(null, /*! ./pg-add-phone/pg-add-phone.module */ "./src/app/pg-add-phone/pg-add-phone.module.ts")).then(m => m.PgAddPhonePageModule)
+    },
+    {
+        path: 'pg-add-content',
+        loadChildren: () => Promise.all(/*! import() | pg-add-content-pg-add-content-module */[__webpack_require__.e("default~home-home-module~pg-add-content-pg-add-content-module~pg-details-pg-details-module"), __webpack_require__.e("common"), __webpack_require__.e("pg-add-content-pg-add-content-module")]).then(__webpack_require__.bind(null, /*! ./pg-add-content/pg-add-content.module */ "./src/app/pg-add-content/pg-add-content.module.ts")).then(m => m.PgAddContentPageModule)
     },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -517,32 +521,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
 /* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/__ivy_ngcc__/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/__ivy_ngcc__/ngx/index.js");
+/* harmony import */ var _capacitor_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @capacitor/core */ "./node_modules/@capacitor/core/dist/esm/index.js");
 
 
 
 
 
+const { StatusBar } = _capacitor_core__WEBPACK_IMPORTED_MODULE_4__["Plugins"];
 let AppComponent = class AppComponent {
-    constructor(platform, splashScreen, statusBar) {
+    constructor(platform, splashScreen) {
         this.platform = platform;
         this.splashScreen = splashScreen;
-        this.statusBar = statusBar;
         this.initializeApp();
     }
     initializeApp() {
         this.platform.ready().then(() => {
-            // this.statusBar.styleDefault();
-            this.statusBar.overlaysWebView(false);
-            this.statusBar.styleLightContent();
+            StatusBar.setStyle({ style: _capacitor_core__WEBPACK_IMPORTED_MODULE_4__["StatusBarStyle"].Light });
+            StatusBar.setOverlaysWebView({ overlay: true });
             this.splashScreen.hide();
         });
     }
 };
 AppComponent.ctorParameters = () => [
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"] },
-    { type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"] },
-    { type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"] }
+    { type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"] }
 ];
 AppComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -591,7 +593,6 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
         entryComponents: [],
         imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"]],
-        exports: [],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],

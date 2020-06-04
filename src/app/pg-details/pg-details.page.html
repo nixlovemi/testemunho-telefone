@@ -1,19 +1,19 @@
 <ion-header>
-    <ion-toolbar mode="ios">
-        <IonButtons slot="start">
+    <ion-toolbar> <!-- mode="ios" -->
+        <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
-        </IonButtons>
-        <ion-title>
+        </ion-buttons>
+        <ion-title class="toolbar-title">
             Testemunho Telefone
         </ion-title>
-        <ion-buttons slot="end">
+        <ion-buttons (click)="delete()" slot="end">
             <ion-icon class="icon-header" slot="icon-only" src="assets/trash.svg" color="danger"></ion-icon>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab (click)="addContent()" vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button>
             <ion-icon class="icon-footer" name="add-circle"></ion-icon>
         </ion-fab-button>
@@ -24,65 +24,54 @@
     </div>
 
     <div class="container">
+        <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+            <ion-refresher-content></ion-refresher-content>
+        </ion-refresher>
+
         <ion-card>
             <ion-card-header>
                 <ion-card-title>
                     <ion-icon color="primary" class="icon-title" src="assets/tools-and-utensils.svg"></ion-icon>
-                    <span>98132-4148</span>
+                    <span>({{ ddd }}) {{phone}}</span>
                 </ion-card-title>
             </ion-card-header>
         </ion-card>
 
-        <ion-card class="card-history">
+        <ion-card class="card-history" *ngIf="noContent">
             <ion-card-content>
-                <ion-icon class="edit-icon" color="primary" src="assets/edit-rounded-2.svg"></ion-icon>
-
                 <p class="line-info">
-                    <ion-icon color="primary" class="icon-title" src="assets/calendario.svg"></ion-icon>
-                    <span>Data: 17/05/2020</span>
-                </p>
-                <p class="line-info">
-                    <ion-icon id="icon-name" color="primary" class="icon-title" src="assets/silhueta-de-usuario-1.svg"></ion-icon>
-                    <span>Nome: Carlos</span>
-                </p>
-                <p class="line-info">
-                    <ion-icon id="icon-bible" color="primary" class="icon-title" src="assets/revista-aberta.svg"></ion-icon>
-                    <span>Texto: Mateus 10:10</span>
-                </p>
-                <p class="line-info">
-                    <ion-icon id="icon-name" color="primary" class="icon-title" src="assets/revistas.svg"></ion-icon>
-                    <span>Publicação: Enviei a brochura XXX</span>
-                </p>
-                <p class="line-info">
-                    <ion-icon id="icon-name" color="primary" class="icon-title" src="assets/notas.svg"></ion-icon>
-                    <span>Notas: Enviei a brochura e fiquei de entrar em contato semana que vem para estudarmos a primeira lição.</span>
+                    <span>Nenhum contato registrado!</span>
                 </p>
             </ion-card-content>
         </ion-card>
 
-        <ion-card class="card-history">
+        <ion-card class="card-history" *ngFor="let cont of content; let i = index">
             <ion-card-content>
-                <ion-icon class="edit-icon" color="primary" src="assets/edit-rounded-2.svg"></ion-icon>
+                <ion-icon (click)="edit(i)" class="edit-icon" color="primary" src="assets/edit-rounded-2.svg"></ion-icon>
 
                 <p class="line-info">
                     <ion-icon color="primary" class="icon-title" src="assets/calendario.svg"></ion-icon>
-                    <span>Data: 17/05/2020</span>
+                    <span>Data: {{ cont.date | date : 'dd/MM/y' }}</span>
                 </p>
                 <p class="line-info">
-                    <ion-icon id="icon-name" color="primary" class="icon-title" src="assets/silhueta-de-usuario-1.svg"></ion-icon>
-                    <span>Nome: Carlos</span>
+                    <ion-icon color="primary" class="icon-title" src="assets/tag.svg"></ion-icon>
+                    <span>Tipo: {{ cont.type }}</span>
+                </p>
+                <p class="line-info" *ngIf="cont.name !== ''">
+                    <ion-icon color="primary" class="icon-title" src="assets/silhueta-de-usuario-1.svg"></ion-icon>
+                    <span>Nome: {{ cont.name }}</span>
+                </p>
+                <p class="line-info" *ngIf="cont.text !== ''">
+                    <ion-icon color="primary" class="icon-title" src="assets/revista-aberta.svg"></ion-icon>
+                    <span>Texto: {{ cont.text }}</span>
+                </p>
+                <p class="line-info" *ngIf="cont.publication !== ''">
+                    <ion-icon color="primary" class="icon-title" src="assets/revistas.svg"></ion-icon>
+                    <span>Publicação: {{ cont.publication }}</span>
                 </p>
                 <p class="line-info">
-                    <ion-icon id="icon-bible" color="primary" class="icon-title" src="assets/revista-aberta.svg"></ion-icon>
-                    <span>Texto: Mateus 10:10</span>
-                </p>
-                <p class="line-info">
-                    <ion-icon id="icon-name" color="primary" class="icon-title" src="assets/revistas.svg"></ion-icon>
-                    <span>Publicação: Enviei a brochura XXX</span>
-                </p>
-                <p class="line-info">
-                    <ion-icon id="icon-name" color="primary" class="icon-title" src="assets/notas.svg"></ion-icon>
-                    <span>Notas: Enviei a brochura e fiquei de entrar em contato semana que vem para estudarmos a primeira lição.</span>
+                    <ion-icon color="primary" class="icon-title" src="assets/notas.svg"></ion-icon>
+                    <span>Notas: {{ cont.anotations }}</span>
                 </p>
             </ion-card-content>
         </ion-card>

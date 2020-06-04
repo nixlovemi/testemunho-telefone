@@ -5,12 +5,17 @@
         left: 6px;
     }
 }
-#icon-name, #icon-bible {
-    font-size: 16px;
+.icon-title{
+    font-size: 17px;
 }
 .edit-icon {
     font-size: 30px;
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: -9px;
+    top: 6px;
+}
+.card-history {
+    ion-card-content {
+        padding-left: 0 !important;
+    }
 }
