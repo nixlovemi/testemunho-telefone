@@ -35,6 +35,17 @@
                     <span>({{ ddd }}) {{phone}}</span>
                 </ion-card-title>
             </ion-card-header>
+            <ion-card-content class="dv-btn-call">
+                <ion-button color="tertiary" (click)="makeCall()">
+                    <ion-icon slot="start" name="megaphone-outline"></ion-icon>
+                    Ligar
+                </ion-button>
+                <!--<ion-button color="tertiary" (click)="openWhats()">-->
+                <ion-button color="tertiary" [href]=" 'whatsapp://send?phone=55' + ddd + phone ">    
+                    <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+                    Whatsapp
+                </ion-button>
+            </ion-card-content>
         </ion-card>
 
         <ion-card class="card-history" *ngIf="noContent">

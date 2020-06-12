@@ -302,6 +302,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         key: "getContactTypes",
         value: function getContactTypes() {
           var arrTypes = [];
+          arrTypes.push('Não existe');
           arrTypes.push('Fora de área');
           arrTypes.push('Caixa postal');
           arrTypes.push('Atendeu');
@@ -754,7 +755,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(UtilsService, [{
         key: "getAppVersion",
         value: function getAppVersion() {
-          return '1.0.2';
+          return '1.1.0';
         }
       }, {
         key: "getLoader",

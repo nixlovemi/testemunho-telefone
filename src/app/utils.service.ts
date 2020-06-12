@@ -5,7 +5,6 @@ import { Plugins } from '@capacitor/core';
   providedIn: 'root'
 })
 export class UtilsService {
-
   constructor(
     private loadingCtr: LoadingController,
     private alertCtr: AlertController,
@@ -13,7 +12,7 @@ export class UtilsService {
   ) { }
 
   public getAppVersion() {
-    return '1.0.2';
+    return '1.1.0';
   }
 
   async getLoader(message: any, spinner: any) {

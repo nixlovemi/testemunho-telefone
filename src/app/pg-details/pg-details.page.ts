@@ -1,6 +1,9 @@
 import { Component, OnInit, NgZone } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, ModalController } from '@ionic/angular';
+import { CallNumber } from '@ionic-native/call-number/ngx';
+import { Plugins } from '@capacitor/core';
+const { Browser } = Plugins;
 
 import { DatabaseService } from './../database.service';
 import { UtilsService } from './../utils.service';
@@ -25,6 +28,7 @@ export class PgDetailsPage implements OnInit {
         private navCtrl: NavController,
         public modalController: ModalController,
         private zone: NgZone,
+        private callNumber: CallNumber,
     ) { }
 
     ngOnInit() {
@@ -115,4 +119,15 @@ export class PgDetailsPage implements OnInit {
           event.target.complete();
         }, 1500);
     }
+
+    makeCall() {
+        this.callNumber.callNumber(this.ddd + this.phone, true)
+            .catch(err => this.utilsSrv.showAlert('Alerta', '', 'Não foi permitido fazer a ligação. Mensagem: ' + err, ['OK']));
+    }
+
+    /*async openWhats(){
+        await Browser.open({
+            url: 'whatsapp://send?phone=' + this.ddd + this.phone
+        });
+    }*/
 }

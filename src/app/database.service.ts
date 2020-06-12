@@ -113,6 +113,7 @@ export class DatabaseService {
   public getContactTypes() {
       const arrTypes = [];
 
+      arrTypes.push('Não existe');
       arrTypes.push('Fora de área');
       arrTypes.push('Caixa postal');
       arrTypes.push('Atendeu');

@@ -21187,6 +21187,7 @@ let DatabaseService = class DatabaseService {
     }
     getContactTypes() {
         const arrTypes = [];
+        arrTypes.push('Não existe');
         arrTypes.push('Fora de área');
         arrTypes.push('Caixa postal');
         arrTypes.push('Atendeu');
@@ -21323,7 +21324,7 @@ let UtilsService = class UtilsService {
         this.platform = platform;
     }
     getAppVersion() {
-        return '1.0.2';
+        return '1.1.0';
     }
     getLoader(message, spinner) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
