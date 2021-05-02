@@ -55,13 +55,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
@@ -115,25 +115,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
     var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/common */
-    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    "./node_modules/@angular/common/fesm2015/common.js");
     /* harmony import */
 
 
     var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @angular/forms */
-    "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
+    "./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
 
 
     var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @ionic/angular */
-    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
     /* harmony import */
 
 
@@ -174,7 +174,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".line-info span {\n  position: relative;\n  top: -2px;\n  left: 6px;\n}\n\n.icon-title {\n  font-size: 17px;\n}\n\n.edit-icon {\n  font-size: 30px;\n  position: absolute;\n  right: -9px;\n  top: 6px;\n}\n\n.card-history ion-card-content {\n  padding-left: 0 !important;\n}\n\n.dv-btn-call {\n  text-align: center;\n}\n\n.dv-btn-call ion-button {\n  font-size: 0.8em;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvcGFycmEvRG9jdW1lbnRzL1Byb2plY3RzL3Rlc3RlbXVuaG8tdGVsZWZvbmUvc3JjL2FwcC9wZy1kZXRhaWxzL3BnLWRldGFpbHMucGFnZS5zY3NzIiwic3JjL2FwcC9wZy1kZXRhaWxzL3BnLWRldGFpbHMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNJO0VBQ0ksa0JBQUE7RUFDQSxTQUFBO0VBQ0EsU0FBQTtBQ0FSOztBREdBO0VBQ0ksZUFBQTtBQ0FKOztBREVBO0VBQ0ksZUFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLFFBQUE7QUNDSjs7QURFSTtFQUNJLDBCQUFBO0FDQ1I7O0FERUE7RUFDSSxrQkFBQTtBQ0NKOztBRENJO0VBQ0ksZ0JBQUE7QUNDUiIsImZpbGUiOiJzcmMvYXBwL3BnLWRldGFpbHMvcGctZGV0YWlscy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGluZS1pbmZvIHtcbiAgICBzcGFuIHtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB0b3A6IC0ycHg7XG4gICAgICAgIGxlZnQ6IDZweDtcbiAgICB9XG59XG4uaWNvbi10aXRsZXtcbiAgICBmb250LXNpemU6IDE3cHg7XG59XG4uZWRpdC1pY29uIHtcbiAgICBmb250LXNpemU6IDMwcHg7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHJpZ2h0OiAtOXB4O1xuICAgIHRvcDogNnB4O1xufVxuLmNhcmQtaGlzdG9yeSB7XG4gICAgaW9uLWNhcmQtY29udGVudCB7XG4gICAgICAgIHBhZGRpbmctbGVmdDogMCAhaW1wb3J0YW50O1xuICAgIH1cbn1cbi5kdi1idG4tY2FsbHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBpb24tYnV0dG9uIHtcbiAgICAgICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICB9XG59IiwiLmxpbmUtaW5mbyBzcGFuIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IC0ycHg7XG4gIGxlZnQ6IDZweDtcbn1cblxuLmljb24tdGl0bGUge1xuICBmb250LXNpemU6IDE3cHg7XG59XG5cbi5lZGl0LWljb24ge1xuICBmb250LXNpemU6IDMwcHg7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IC05cHg7XG4gIHRvcDogNnB4O1xufVxuXG4uY2FyZC1oaXN0b3J5IGlvbi1jYXJkLWNvbnRlbnQge1xuICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn1cblxuLmR2LWJ0bi1jYWxsIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuLmR2LWJ0bi1jYWxsIGlvbi1idXR0b24ge1xuICBmb250LXNpemU6IDAuOGVtO1xufSJdfQ== */";
+    __webpack_exports__["default"] = ".line-info span {\n  position: relative;\n  top: -2px;\n  left: 6px;\n}\n\n.icon-title {\n  font-size: 17px;\n}\n\n.edit-icon {\n  font-size: 30px;\n  position: absolute;\n  right: -9px;\n  top: 6px;\n}\n\n.card-history ion-card-content {\n  padding-left: 0 !important;\n}\n\n.dv-btn-call {\n  text-align: center;\n}\n\n.dv-btn-call ion-button {\n  font-size: 0.8em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvcGFycmEvRG9jdW1lbnRzL1Byb2pldG9zL3Rlc3RlbXVuaG8tdGVsZWZvbmUvc3JjL2FwcC9wZy1kZXRhaWxzL3BnLWRldGFpbHMucGFnZS5zY3NzIiwic3JjL2FwcC9wZy1kZXRhaWxzL3BnLWRldGFpbHMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRVEsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxTQUFTO0FDQWpCOztBREdBO0VBQ0ksZUFBZTtBQ0FuQjs7QURFQTtFQUNJLGVBQWU7RUFDZixrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFFBQVE7QUNDWjs7QURDQTtFQUVRLDBCQUEwQjtBQ0NsQzs7QURFQTtFQUNJLGtCQUFrQjtBQ0N0Qjs7QURGQTtFQUlRLGdCQUFnQjtBQ0V4QiIsImZpbGUiOiJzcmMvYXBwL3BnLWRldGFpbHMvcGctZGV0YWlscy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubGluZS1pbmZvIHtcbiAgICBzcGFuIHtcbiAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICB0b3A6IC0ycHg7XG4gICAgICAgIGxlZnQ6IDZweDtcbiAgICB9XG59XG4uaWNvbi10aXRsZXtcbiAgICBmb250LXNpemU6IDE3cHg7XG59XG4uZWRpdC1pY29uIHtcbiAgICBmb250LXNpemU6IDMwcHg7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHJpZ2h0OiAtOXB4O1xuICAgIHRvcDogNnB4O1xufVxuLmNhcmQtaGlzdG9yeSB7XG4gICAgaW9uLWNhcmQtY29udGVudCB7XG4gICAgICAgIHBhZGRpbmctbGVmdDogMCAhaW1wb3J0YW50O1xuICAgIH1cbn1cbi5kdi1idG4tY2FsbHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgICBpb24tYnV0dG9uIHtcbiAgICAgICAgZm9udC1zaXplOiAwLjhlbTtcbiAgICB9XG59IiwiLmxpbmUtaW5mbyBzcGFuIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB0b3A6IC0ycHg7XG4gIGxlZnQ6IDZweDtcbn1cblxuLmljb24tdGl0bGUge1xuICBmb250LXNpemU6IDE3cHg7XG59XG5cbi5lZGl0LWljb24ge1xuICBmb250LXNpemU6IDMwcHg7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgcmlnaHQ6IC05cHg7XG4gIHRvcDogNnB4O1xufVxuXG4uY2FyZC1oaXN0b3J5IGlvbi1jYXJkLWNvbnRlbnQge1xuICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn1cblxuLmR2LWJ0bi1jYWxsIHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4uZHYtYnRuLWNhbGwgaW9uLWJ1dHRvbiB7XG4gIGZvbnQtc2l6ZTogMC44ZW07XG59XG4iXX0= */";
     /***/
   },
 
@@ -208,25 +208,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
     /*! @angular/core */
-    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    "./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
 
 
     var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! @angular/router */
-    "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+    "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
     var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! @ionic/angular */
-    "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+    "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
     /* harmony import */
 
 
     var _ionic_native_call_number_ngx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @ionic-native/call-number/ngx */
-    "./node_modules/@ionic-native/call-number/__ivy_ngcc__/ngx/index.js");
+    "./node_modules/@ionic-native/call-number/ngx/index.js");
     /* harmony import */
 
 

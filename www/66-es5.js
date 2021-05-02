@@ -201,6 +201,31 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
         }
       }, {
+        key: "hasLabel",
+        get: function get() {
+          return !!this.el.querySelector('ion-label');
+        }
+      }, {
+        key: "hasIcon",
+        get: function get() {
+          return !!this.el.querySelector('ion-icon');
+        }
+      }, {
+        key: "tabIndex",
+        get: function get() {
+          if (this.disabled) {
+            return -1;
+          }
+
+          var hasTabIndex = this.el.hasAttribute('tabindex');
+
+          if (hasTabIndex) {
+            return this.el.getAttribute('tabindex');
+          }
+
+          return 0;
+        }
+      }, {
         key: "render",
         value: function render() {
           var _class;
@@ -238,31 +263,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }, Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", null)), mode === 'md' && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
             type: "unbounded"
           })));
-        }
-      }, {
-        key: "hasLabel",
-        get: function get() {
-          return !!this.el.querySelector('ion-label');
-        }
-      }, {
-        key: "hasIcon",
-        get: function get() {
-          return !!this.el.querySelector('ion-icon');
-        }
-      }, {
-        key: "tabIndex",
-        get: function get() {
-          if (this.disabled) {
-            return -1;
-          }
-
-          var hasTabIndex = this.el.hasAttribute('tabindex');
-
-          if (hasTabIndex) {
-            return this.el.getAttribute('tabindex');
-          }
-
-          return 0;
         }
       }, {
         key: "el",

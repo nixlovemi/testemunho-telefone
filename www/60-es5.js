@@ -590,6 +590,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return this.getText() !== '';
         }
       }, {
+        key: "childOpts",
+        get: function get() {
+          return Array.from(this.el.querySelectorAll('ion-select-option'));
+        }
+      }, {
         key: "getText",
         value: function getText() {
           var selectedText = this.selectedText;
@@ -679,11 +684,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               return _this8.buttonEl = btnEl;
             }
           }));
-        }
-      }, {
-        key: "childOpts",
-        get: function get() {
-          return Array.from(this.el.querySelectorAll('ion-select-option'));
         }
       }, {
         key: "el",

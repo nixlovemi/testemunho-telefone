@@ -391,7 +391,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("ion-card-content {\n  padding-left: 0 !important;\n}\n\n.card-history {\n  padding: 0 16px 20px 16px;\n}\n\n#btn-delete {\n  font-size: 14px;\n}\n\n#btn-delete ion-icon {\n  font-size: 12px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvcGFycmEvRG9jdW1lbnRzL1Byb2plY3RzL3Rlc3RlbXVuaG8tdGVsZWZvbmUvc3JjL2FwcC9wZy1hZGQtY29udGVudC9wZy1hZGQtY29udGVudC5wYWdlLnNjc3MiLCJzcmMvYXBwL3BnLWFkZC1jb250ZW50L3BnLWFkZC1jb250ZW50LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDBCQUFBO0FDQ0o7O0FEQ0E7RUFDSSx5QkFBQTtBQ0VKOztBREFBO0VBQ0ksZUFBQTtBQ0dKOztBRERJO0VBQ0ksZUFBQTtBQ0dSIiwiZmlsZSI6InNyYy9hcHAvcGctYWRkLWNvbnRlbnQvcGctYWRkLWNvbnRlbnQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNhcmQtY29udGVudCB7XG4gICAgcGFkZGluZy1sZWZ0OiAwICFpbXBvcnRhbnQ7XG59XG4uY2FyZC1oaXN0b3J5IHtcbiAgICBwYWRkaW5nOiAwIDE2cHggMjBweCAxNnB4O1xufVxuI2J0bi1kZWxldGUge1xuICAgIGZvbnQtc2l6ZTogMTRweDtcblxuICAgIGlvbi1pY29uIHtcbiAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgIH1cbn0iLCJpb24tY2FyZC1jb250ZW50IHtcbiAgcGFkZGluZy1sZWZ0OiAwICFpbXBvcnRhbnQ7XG59XG5cbi5jYXJkLWhpc3Rvcnkge1xuICBwYWRkaW5nOiAwIDE2cHggMjBweCAxNnB4O1xufVxuXG4jYnRuLWRlbGV0ZSB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cbiNidG4tZGVsZXRlIGlvbi1pY29uIHtcbiAgZm9udC1zaXplOiAxMnB4O1xufSJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("ion-card-content {\n  padding-left: 0 !important;\n}\n\n.card-history {\n  padding: 0 16px 20px 16px;\n}\n\n#btn-delete {\n  font-size: 14px;\n}\n\n#btn-delete ion-icon {\n  font-size: 12px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvcGFycmEvRG9jdW1lbnRzL1Byb2pldG9zL3Rlc3RlbXVuaG8tdGVsZWZvbmUvc3JjL2FwcC9wZy1hZGQtY29udGVudC9wZy1hZGQtY29udGVudC5wYWdlLnNjc3MiLCJzcmMvYXBwL3BnLWFkZC1jb250ZW50L3BnLWFkZC1jb250ZW50LnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLDBCQUEwQjtBQ0M5Qjs7QURDQTtFQUNJLHlCQUF5QjtBQ0U3Qjs7QURBQTtFQUNJLGVBQWU7QUNHbkI7O0FESkE7RUFJUSxlQUFlO0FDSXZCIiwiZmlsZSI6InNyYy9hcHAvcGctYWRkLWNvbnRlbnQvcGctYWRkLWNvbnRlbnQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNhcmQtY29udGVudCB7XG4gICAgcGFkZGluZy1sZWZ0OiAwICFpbXBvcnRhbnQ7XG59XG4uY2FyZC1oaXN0b3J5IHtcbiAgICBwYWRkaW5nOiAwIDE2cHggMjBweCAxNnB4O1xufVxuI2J0bi1kZWxldGUge1xuICAgIGZvbnQtc2l6ZTogMTRweDtcblxuICAgIGlvbi1pY29uIHtcbiAgICAgICAgZm9udC1zaXplOiAxMnB4O1xuICAgIH1cbn0iLCJpb24tY2FyZC1jb250ZW50IHtcbiAgcGFkZGluZy1sZWZ0OiAwICFpbXBvcnRhbnQ7XG59XG5cbi5jYXJkLWhpc3Rvcnkge1xuICBwYWRkaW5nOiAwIDE2cHggMjBweCAxNnB4O1xufVxuXG4jYnRuLWRlbGV0ZSB7XG4gIGZvbnQtc2l6ZTogMTRweDtcbn1cblxuI2J0bi1kZWxldGUgaW9uLWljb24ge1xuICBmb250LXNpemU6IDEycHg7XG59XG4iXX0= */");
 
 /***/ }),
 
@@ -406,8 +406,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PgAddContentPage", function() { return PgAddContentPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _capacitor_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @capacitor/core */ "./node_modules/@capacitor/core/dist/esm/index.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
@@ -583,7 +583,7 @@ PgAddContentPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("ion-card-content {\n  padding-left: 0 !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvcGFycmEvRG9jdW1lbnRzL1Byb2plY3RzL3Rlc3RlbXVuaG8tdGVsZWZvbmUvc3JjL2FwcC9wZy1hZGQtcGhvbmUvcGctYWRkLXBob25lLnBhZ2Uuc2NzcyIsInNyYy9hcHAvcGctYWRkLXBob25lL3BnLWFkZC1waG9uZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwwQkFBQTtBQ0NKIiwiZmlsZSI6InNyYy9hcHAvcGctYWRkLXBob25lL3BnLWFkZC1waG9uZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY2FyZC1jb250ZW50IHtcbiAgICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn0iLCJpb24tY2FyZC1jb250ZW50IHtcbiAgcGFkZGluZy1sZWZ0OiAwICFpbXBvcnRhbnQ7XG59Il19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("ion-card-content {\n  padding-left: 0 !important;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9sZWFuZHJvcGFycmEvRG9jdW1lbnRzL1Byb2pldG9zL3Rlc3RlbXVuaG8tdGVsZWZvbmUvc3JjL2FwcC9wZy1hZGQtcGhvbmUvcGctYWRkLXBob25lLnBhZ2Uuc2NzcyIsInNyYy9hcHAvcGctYWRkLXBob25lL3BnLWFkZC1waG9uZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSwwQkFBMEI7QUNDOUIiLCJmaWxlIjoic3JjL2FwcC9wZy1hZGQtcGhvbmUvcGctYWRkLXBob25lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jYXJkLWNvbnRlbnQge1xuICAgIHBhZGRpbmctbGVmdDogMCAhaW1wb3J0YW50O1xufSIsImlvbi1jYXJkLWNvbnRlbnQge1xuICBwYWRkaW5nLWxlZnQ6IDAgIWltcG9ydGFudDtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -598,8 +598,8 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PgAddPhonePage", function() { return PgAddPhonePage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/fesm2015/ionic-angular.js");
 /* harmony import */ var _capacitor_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @capacitor/core */ "./node_modules/@capacitor/core/dist/esm/index.js");
 /* harmony import */ var _utils_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils.service */ "./src/app/utils.service.ts");
 /* harmony import */ var _database_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../database.service */ "./src/app/database.service.ts");

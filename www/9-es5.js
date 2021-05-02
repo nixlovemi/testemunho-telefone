@@ -127,41 +127,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
         }
       }, {
-        key: "render",
-        value: function render() {
-          var _Object$assign;
-
-          var color = this.color,
-              defaultHref = this.defaultHref,
-              disabled = this.disabled,
-              type = this.type,
-              hasIconOnly = this.hasIconOnly,
-              backButtonIcon = this.backButtonIcon,
-              backButtonText = this.backButtonText;
-          var showBackButton = defaultHref !== undefined;
-          var mode = Object(_ionic_global_fbc9a2ac_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
-          return Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
-            onClick: this.onClick,
-            "class": Object.assign(Object.assign({}, Object(_theme_c2dc54d9_js__WEBPACK_IMPORTED_MODULE_2__["c"])(color)), (_Object$assign = {}, _defineProperty(_Object$assign, mode, true), _defineProperty(_Object$assign, 'button', true), _defineProperty(_Object$assign, 'back-button-disabled', disabled), _defineProperty(_Object$assign, 'back-button-has-icon-only', hasIconOnly), _defineProperty(_Object$assign, 'in-toolbar', Object(_theme_c2dc54d9_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-toolbar', this.el)), _defineProperty(_Object$assign, 'in-toolbar-color', Object(_theme_c2dc54d9_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object$assign, 'ion-activatable', true), _defineProperty(_Object$assign, 'ion-focusable', true), _defineProperty(_Object$assign, 'show-back-button', showBackButton), _Object$assign))
-          }, Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", {
-            type: type,
-            disabled: disabled,
-            "class": "button-native",
-            "aria-label": backButtonText || 'back'
-          }, Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
-            "class": "button-inner"
-          }, backButtonIcon && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
-            icon: backButtonIcon,
-            "aria-hidden": "true",
-            lazy: false
-          }), backButtonText && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
-            "aria-hidden": "true",
-            "class": "button-text"
-          }, backButtonText)), mode === 'md' && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
-            type: this.rippleType
-          })));
-        }
-      }, {
         key: "backButtonIcon",
         get: function get() {
           var icon = this.icon;
@@ -200,6 +165,41 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           return 'bounded';
+        }
+      }, {
+        key: "render",
+        value: function render() {
+          var _Object$assign;
+
+          var color = this.color,
+              defaultHref = this.defaultHref,
+              disabled = this.disabled,
+              type = this.type,
+              hasIconOnly = this.hasIconOnly,
+              backButtonIcon = this.backButtonIcon,
+              backButtonText = this.backButtonText;
+          var showBackButton = defaultHref !== undefined;
+          var mode = Object(_ionic_global_fbc9a2ac_js__WEBPACK_IMPORTED_MODULE_1__["b"])(this);
+          return Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["H"], {
+            onClick: this.onClick,
+            "class": Object.assign(Object.assign({}, Object(_theme_c2dc54d9_js__WEBPACK_IMPORTED_MODULE_2__["c"])(color)), (_Object$assign = {}, _defineProperty(_Object$assign, mode, true), _defineProperty(_Object$assign, 'button', true), _defineProperty(_Object$assign, 'back-button-disabled', disabled), _defineProperty(_Object$assign, 'back-button-has-icon-only', hasIconOnly), _defineProperty(_Object$assign, 'in-toolbar', Object(_theme_c2dc54d9_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-toolbar', this.el)), _defineProperty(_Object$assign, 'in-toolbar-color', Object(_theme_c2dc54d9_js__WEBPACK_IMPORTED_MODULE_2__["h"])('ion-toolbar[color]', this.el)), _defineProperty(_Object$assign, 'ion-activatable', true), _defineProperty(_Object$assign, 'ion-focusable', true), _defineProperty(_Object$assign, 'show-back-button', showBackButton), _Object$assign))
+          }, Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button", {
+            type: type,
+            disabled: disabled,
+            "class": "button-native",
+            "aria-label": backButtonText || 'back'
+          }, Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
+            "class": "button-inner"
+          }, backButtonIcon && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-icon", {
+            icon: backButtonIcon,
+            "aria-hidden": "true",
+            lazy: false
+          }), backButtonText && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("span", {
+            "aria-hidden": "true",
+            "class": "button-text"
+          }, backButtonText)), mode === 'md' && Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect", {
+            type: this.rippleType
+          })));
         }
       }, {
         key: "el",

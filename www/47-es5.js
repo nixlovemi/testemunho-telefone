@@ -384,6 +384,34 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           this.updateValue();
         }
       }, {
+        key: "valA",
+        get: function get() {
+          return ratioToValue(this.ratioA, this.min, this.max, this.step);
+        }
+      }, {
+        key: "valB",
+        get: function get() {
+          return ratioToValue(this.ratioB, this.min, this.max, this.step);
+        }
+      }, {
+        key: "ratioLower",
+        get: function get() {
+          if (this.dualKnobs) {
+            return Math.min(this.ratioA, this.ratioB);
+          }
+
+          return 0;
+        }
+      }, {
+        key: "ratioUpper",
+        get: function get() {
+          if (this.dualKnobs) {
+            return Math.max(this.ratioA, this.ratioB);
+          }
+
+          return this.ratioA;
+        }
+      }, {
         key: "updateRatio",
         value: function updateRatio() {
           var value = this.getValue();
@@ -518,34 +546,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           })), Object(_index_e23c3ffd_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot", {
             name: "end"
           }));
-        }
-      }, {
-        key: "valA",
-        get: function get() {
-          return ratioToValue(this.ratioA, this.min, this.max, this.step);
-        }
-      }, {
-        key: "valB",
-        get: function get() {
-          return ratioToValue(this.ratioB, this.min, this.max, this.step);
-        }
-      }, {
-        key: "ratioLower",
-        get: function get() {
-          if (this.dualKnobs) {
-            return Math.min(this.ratioA, this.ratioB);
-          }
-
-          return 0;
-        }
-      }, {
-        key: "ratioUpper",
-        get: function get() {
-          if (this.dualKnobs) {
-            return Math.max(this.ratioA, this.ratioB);
-          }
-
-          return this.ratioA;
         }
       }, {
         key: "el",
