@@ -1,5 +1,5 @@
 [The right workspace is at ios/App/App.xcworkspace]
 
 App identifier: br.com.leandroparra.testemunho.telefone
-Buildar IOS: sudo ionic capacitor build ios / npx cap sync ios / pod install (ios folder)
+Buildar IOS: sudo ionic capacitor build ios / sudo npx cap sync ios / pod install (ios folder)
 Install cocoa pods: sudo gem install cocoapods
