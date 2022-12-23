@@ -1,8 +1,18 @@
 [The right workspace is at ios/App/App.xcworkspace]
 
+https://developer.apple.com
+
 App identifier: br.com.leandroparra.testemunho.telefone
 Buildar IOS: sudo ionic capacitor build ios / sudo npx cap sync ios / pod install (ios folder)
 Install cocoa pods: sudo gem install cocoapods
 
+// Xcode
+CFBundleDisplayName: change app display name
+
+// commands
 ionic build
 ionic serve
+ionic cap add ios
+npx cap add ios
+npx cap open ios
+cordova-res ios --skip-config --copy
