@@ -15,8 +15,8 @@
     </ion-fab>
 
     <div class="home-header">
-        <h1 class="title">Telefones</h1>
-        <ion-searchbar (ionChange)="filterPhone($event)" placeholder="Pesquisar telefone" animated></ion-searchbar>
+        <h1 class="title">Filtrar</h1>
+        <ion-searchbar (ionChange)="filterPhone($event)" placeholder="Digite o telefone/nome" animated></ion-searchbar>
     </div>
     <div class="container">
         <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">

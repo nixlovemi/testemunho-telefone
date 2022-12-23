@@ -68,13 +68,22 @@ export class HomePage {
   private postFilterPhone(filter: string) {
     if (filter.trim() === ''){
         this.displayPhones = this.arrPhones;
-    } else {
-        this.displayPhones = this.arrPhones.filter((obj) => {
-            const phone = obj.ddd + obj.phone;
-            return phone.indexOf(filter) >= 0;
-            // @todo make filter by content name too
-        });
+        return
     }
+    
+    this.displayPhones = this.arrPhones.filter((obj) => {
+      // search by phone nbr
+      const phone = obj.ddd + obj.phone;
+      const foundPhone = phone.indexOf(filter) >= 0;
+
+      // search by contact name
+      const arrContent = obj.content.filter((obj2) => {
+        return obj2.name.toLowerCase().indexOf(filter.toLowerCase()) >=0;
+      });
+      const foundName = arrContent.length > 0;
+
+      return foundPhone || foundName;
+    });
   }
 
   public getLastContact(ddd: string, phone: string) {
