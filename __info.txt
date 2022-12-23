@@ -3,3 +3,6 @@
 App identifier: br.com.leandroparra.testemunho.telefone
 Buildar IOS: sudo ionic capacitor build ios / sudo npx cap sync ios / pod install (ios folder)
 Install cocoa pods: sudo gem install cocoapods
+
+ionic build
+ionic serve
