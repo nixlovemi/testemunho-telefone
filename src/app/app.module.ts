@@ -9,10 +9,21 @@ import { CallNumber } from '@ionic-native/call-number/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { PgAddPhonePageModule } from './pg-add-phone/pg-add-phone.module';
+import { PgAddContentPageModule } from './pg-add-content/pg-add-content.module';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+  ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    PgAddPhonePageModule,
+    PgAddContentPageModule,
+  ],
   providers: [
     StatusBar,
     SplashScreen,
